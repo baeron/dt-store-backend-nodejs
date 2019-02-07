@@ -23,6 +23,8 @@ mongoose
 require("./routes/category.routes")(app);
 require("./routes/customer.routes")(app);
 require("./routes/product.routes")(app);
+require("./routes/shoppingCard.routes")(app);
+require("./routes/user.routes")(app);
 // require("./app/routes/init.routes.js")(app);
 
 // Create a Server

@@ -20,9 +20,9 @@ exports.addCategory = (req, res) => {
   console.log(newCategory);
   newCategory.save(err => {
     if (err) {
-      res.status(404).send("Some Error");
+      res.status(404).send({ message: err.message });
     } else {
-      res.status(201).send("Created");
+      res.status(201).send({ message: "Created" });
     }
   });
 };
