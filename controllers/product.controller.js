@@ -43,6 +43,9 @@ exports.findAllProductsByCategoryId = (req, res) => {
 exports.addProduct = (req, res) => {
   const newProduct = new Product({
     name: req.body.name,
+    price: req.body.price,
+    description: req.body.description,
+    image: req.body.image,
     category: req.body.category
   });
   newProduct.save(err => {

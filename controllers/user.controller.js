@@ -18,8 +18,6 @@ exports.addUser = (req, res) => {
     email: req.body.email,
     password: req.body.password
   });
-  debugger;
-  console.log(newUser);
   newUser.save(err => {
     if (err) {
       res.status(404).send({ message: err.message });

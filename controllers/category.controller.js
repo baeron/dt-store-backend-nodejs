@@ -14,10 +14,11 @@ exports.findAll = (req, res) => {
 
 exports.addCategory = (req, res) => {
   const newCategory = new Category({
-    name: req.body.name
+    backgroundImage: req.body.backgroundImage || "",
+    categoryDescroption: req.bodycategoryDescroption || "",
+    categoryName: req.body.categoryName || "",
+    categoryShortDescroption: req.body.categoryShortDescroption || ""
   });
-  debugger;
-  console.log(newCategory);
   newCategory.save(err => {
     if (err) {
       res.status(404).send({ message: err.message });

@@ -1,7 +1,11 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
+const express = require("express");
+const compression = require("compression");
+const cors = require("cors");
+const app = express();
+const bodyParser = require("body-parser");
 app.use(bodyParser.json());
+app.use(cors());
+app.use(compression());
 
 // Configuring the database
 const dbConfig = require("./config/mongodb.config");
